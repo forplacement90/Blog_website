@@ -28,3 +28,7 @@ const blogSchema = new Schema({
         type: Date,
     }
 });
+
+const Blog = mongoose.model("Blog", blogSchema);
+
+module.exports = Blog;

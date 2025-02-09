@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+    <h3>All Blogs!</h3>
+
+    <% for(let blog of allBlogs) { %>
+        <div>
+            <p>Username: <i><b> <%= blog.username %> </b></i></p>
+            <img src="<%= blog.image %>" alt="blogPic">
+            <p><h2><%= blog.title %></h2></p> 
+            <p><%= blog.description %></p>
+            <p><%= blog.created_at.toString().split(" ")[4] %></p>
+            <p><%= blog.created_at.toString().split(" ").slice(0, 4).join("-") %></p>
+        </div>
+        <hr>
+        <br><br>
+    <% } %>
+
+</body>
+</html>
