@@ -7,6 +7,7 @@ const Blog = require("./models/blog.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({extended: true}));
 
 const MONGO_URL ="mongodb://127.0.0.1:27017/blogweb";
 
@@ -48,4 +49,23 @@ app.get("/", (req, res) => {
 app.get("/blogs", async (req, res) => {
   const allBlogs = await Blog.find({});
   res.render("./blogs/index.ejs", { allBlogs });
+});
+
+// New Route
+app.get("/blogs/new", (req, res) => {
+  res.render("./blogs/new.ejs");
+});
+
+// Create Route
+app.post("/blogs", async (req, res) => {
+  let { username, title, description, image } = req.body;
+  const newBlog = new Blog({
+    username: username,
+    title: title,
+    description: description,
+    image: image,
+    created_at: new Date()
+  });
+    await newBlog.save();
+    res.redirect("/blogs");
 });
