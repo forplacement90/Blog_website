@@ -17,6 +17,23 @@
     font-size: 2rem;
 }
 
-/* Navbar 2 */
+img{
+    border-radius: 20px;
+}
 
-    /* font-weight: 600 !important; */
+
+/* Card */
+.card2{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6px;
+   
+
+}
+.card{
+
+    border: 1px solid black;
+    margin: 15px;
+   
+    
+}
