@@ -1,0 +1,22 @@
+
+/* Navbar 1 */
+.fn a{
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 25px;
+    margin: 6px;
+}
+.fn a:hover{
+    background-color: red;
+    
+}
+
+.fa-compass {
+    color: rgb(219, 242, 13);
+    font-size: 2rem;
+}
+
+/* Navbar 2 */
+
+    /* font-weight: 600 !important; */
