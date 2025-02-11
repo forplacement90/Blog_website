@@ -1,5 +1,8 @@
 
 <% layout("/layouts/boilerplate") %>
+<body>
+  
+
 
           <div id="filters">
             <div class="filter">
@@ -58,6 +61,7 @@
                 <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
               </div>
             </div>
+
             
           </div>
 
@@ -80,11 +84,16 @@
               <p class="card-text"><%= blog.created_at.toString().split(" ")[4] %></p>
               <p class="card-text"><%= blog.created_at.toString().split(" ").slice(0, 4).join("-") %></p>
               <p class="card-text"> Username by <i><%= blog.username %></i></p> 
+              <p><strong>Last Updated:</strong> <span id="updatedAt"><%= new Date(blog.updated_at).toLocaleString() %></span></p>
             </div>
         </div>
       </a>
         <% } %>
     </div>
+  </body>
+
+    
+  
 
 
     
