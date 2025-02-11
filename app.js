@@ -97,3 +97,12 @@ app.put("/blogs/:id", async (req, res) => {
   console.log(updatedBlog);
   res.redirect(`/blogs/${id}`);
 }); 
+
+// Delete Route
+app.delete("/blogs/:id", async (req, res) => {
+  let {id} = req.params;
+  let deletedBlog = await Blog.findByIdAndDelete(id);
+  console.log(deletedBlog);
+  res.redirect("/blogs");
+});
+
