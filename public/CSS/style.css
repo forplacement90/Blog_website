@@ -34,10 +34,6 @@ img{
 .card{
     margin: 15px; 
 }
-.card:hover {
-    
-    transform: translateY(-8px);
-}
 
 /* icons */
 #filters{
@@ -71,4 +67,8 @@ img{
     margin-left: 3rem;
     display: flex;
     align-items: center;
+  }
+
+  .fn2{
+    margin-left: 220px;
   }
