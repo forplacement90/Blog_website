@@ -1,7 +1,5 @@
-<% layout("/layouts/boilerplate") %>
 
-    
-       
+<% layout("/layouts/boilerplate") %>
 
           <div id="filters">
             <div class="filter">
@@ -72,17 +70,18 @@
 
     <div class="card2 ">
     <% for(let blog of allBlogs) { %>
-   
+      <a href="/blogs/<%= blog._id %>" class="listing-link">
         <div class="card " style="width: 18rem;">
             <img src="<%= blog.image %>" alt="blogPic"  style="height: 20rem;" class="p-2">
+            <div class="card-img-overlay"></div>
             <div class="card-body">
               <h5 class="card-title"><%= blog.title %></h5>
-              <p class="card-text"><%= blog.description %></p>
+              <!-- <p class="card-text"><%= blog.description %></p> -->
               <p class="card-text"><%= blog.created_at.toString().split(" ")[4] %></p>
               <p class="card-text"><%= blog.created_at.toString().split(" ").slice(0, 4).join("-") %></p>
-              <!-- <a href="#" class="btn btn-primary">Buy Now</a> -->
             </div>
         </div>
+      </a>
         <% } %>
     </div>
 

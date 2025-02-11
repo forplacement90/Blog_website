@@ -32,12 +32,11 @@ img{
 
 }
 .card{
+    margin: 15px; 
+}
 
-    
-    margin: 15px;
-   
-   
-    
+.listing-link {
+  text-decoration: none;
 }
 
 /* icons */
@@ -73,3 +72,13 @@ img{
     display: flex;
     align-items: center;
   }
+
+/* Card Effect */
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}

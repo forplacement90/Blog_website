@@ -72,3 +72,10 @@ app.post("/blogs", async (req, res) => {
     await newBlog.save();
     res.redirect("/blogs");
 });
+
+// Show Route
+app.get("/blogs/:id", async (req, res) => {
+  let {id} = req.params;
+  const blog = await Blog.findById(id);
+  res.render("blogs/show.ejs", {blog});
+});
