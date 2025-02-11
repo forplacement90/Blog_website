@@ -1,0 +1,30 @@
+
+<% layout("/layouts/boilerplate") %>
+
+        <h3>Edit Your Blog</h3>  <br>
+        <form method="POST" action="/blogs/<%= blog._id %>?_method=PUT">
+            
+                <label for="title">Title</label>
+                <input name="title" value="<%= blog.title %>" type="text">
+                <br> <br>
+           
+                <label for="description">Description</label>
+                <textarea name="description" 
+                    type="text" 
+                    rows="2" cols="20"
+                ><%= blog.description %>
+                </textarea>
+                <br> <br>
+
+                <label for="image">Image Link</label>
+                <input name="image" value="<%= blog.image %>" type="text">
+                <br> <br>
+
+                <h3>Username: <%= blog.username %></h3>  <br> <br>
+
+            <button>Edit</button>
+            <br> <br>
+        </form>
+    </div> 
+</div>
+
