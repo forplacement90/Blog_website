@@ -5,13 +5,14 @@ const mongoose = require("mongoose");
 const path = require("path");
 const Blog = require("./models/blog.js");
 const ejsMate = require("ejs-mate");
+const methodOverride = require("method-override");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
-
 app.engine('ejs',ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
+app.use(methodOverride("_method"));
 
 
 const MONGO_URL ="mongodb://127.0.0.1:27017/blogweb";
@@ -72,3 +73,27 @@ app.post("/blogs", async (req, res) => {
     await newBlog.save();
     res.redirect("/blogs");
 });
+
+// Show Route
+app.get("/blogs/:id", async (req, res) => {
+  let {id} = req.params;
+  const blog = await Blog.findById(id);
+  res.render("blogs/show.ejs", {blog});
+});
+
+// Edit Route
+app.get("/blogs/:id/edit", async (req, res) => {
+  let {id} = req.params;
+  const blog = await Blog.findById(id);
+  res.render("blogs/edit.ejs", {blog});
+});
+
+// Update Route
+app.put("/blogs/:id", async (req, res) => {
+  let {id} = req.params;
+  let { title, description, image } = req.body;
+  const updated_at = new Date(Date.now());
+  let updatedBlog = await Blog.findByIdAndUpdate(id, { title, description, image, updated_at}, {runValidators: true, new: true});
+  console.log(updatedBlog);
+  res.redirect(`/blogs/${id}`);
+}); 
