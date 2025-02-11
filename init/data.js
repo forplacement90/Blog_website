@@ -64,3 +64,7 @@ const sampleBlogs = [
       },
      
 ];
+
+
+module.exports = { data: sampleBlogs };
+
