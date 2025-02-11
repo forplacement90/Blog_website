@@ -1,7 +1,7 @@
 
 <% layout("/layouts/boilerplate") %>
 
-        <h3>Edit Your Blog</h3>  <br>
+        <!-- <h3>Edit Your Blog</h3>  <br>
         <form method="POST" action="/blogs/<%= blog._id %>?_method=PUT">
             
                 <label for="title">Title</label>
@@ -26,5 +26,46 @@
             <br> <br>
         </form>
     </div> 
+</div> -->
+
+
+
+
+<div class="row mt-3">
+    <div class="col-8 offset-2"> 
+
+   
+    <h3>Edit your Listing</h3>
+    <form method="POST" action="/blogs/<%= blog._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input name="blog[title]" value="<%= blog.title %>" type="text" class="form-control" required/>
+        <div class="invalid-feedback">Please Enter a tittle</div>
+      </div>
+
+     <div class="mb-3">
+      <label for="description" class="form-label" required>Describtion</label>
+      <textarea name="blog[description]">
+        <%= blog.description %> </textarea>
+    <div class="invalid-feedback">Please Enter a Description</div>
+    </div>
+
+    <div class="mb-3">
+      Image Link <br/>
+      <img src="<%= blog.image %>" alt="no found!!">
+    </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image Link</label>
+      <input name="blog[image]"  type="text" />
+      <div class="invalid-feedback">Please Enter a Image</div>
+    </div>
+
+    </div>
+    <div class="d-flex justify-content-start fn2">
+        <button class="btn btn-primary w-20 mt-3 mb-5 ">Edit</button>
+      </div>
+    </form>
+  </div>
 </div>
+
 

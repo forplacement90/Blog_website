@@ -79,6 +79,7 @@
               <!-- <p class="card-text"><%= blog.description %></p> -->
               <p class="card-text"><%= blog.created_at.toString().split(" ")[4] %></p>
               <p class="card-text"><%= blog.created_at.toString().split(" ").slice(0, 4).join("-") %></p>
+              <p class="card-text"> Username by <i><%= blog.username %></i></p> 
             </div>
         </div>
       </a>

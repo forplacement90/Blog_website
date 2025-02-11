@@ -73,3 +73,11 @@ img{
     display: flex;
     align-items: center;
   }
+
+  .fn2{
+    margin-left: 220px;
+  }
+
+  .btns{
+    display: flex;
+}
