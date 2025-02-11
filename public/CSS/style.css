@@ -90,3 +90,7 @@ img{
   .btns{
     display: flex;
 }
+.f3{
+  height: 300px;
+  border-top: 25px;
+}

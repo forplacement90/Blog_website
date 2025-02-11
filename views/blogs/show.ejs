@@ -1,23 +1,6 @@
 
 <% layout("/layouts/boilerplate") %>
 
-<!-- <h3>Blog Details </h3>
-
-<img src="<%= blog.image %>" alt="blog_image">
-<p >
-    <b><%= blog.title %></b> <br>
-    <%= blog.description %> <br>
-    <%= blog.created_at.toString().split(" ")[4] %> <br>
-    <%= blog.created_at.toString().split(" ").slice(0, 4).join("-") %> <br>
-    <%= blog.username %>
-</p>
-
-<br><br>
-    <a href="/blogs/<%= blog._id %>/edit">Edit</a> <br><br><br><br>
-
-    <form method="POST" action="/blogs/<%= blog._id %>?_method=DELETE">
-        <button>Delete</button>
-    </form> -->
 
 
 
@@ -25,8 +8,8 @@
         <div class="col-8 offset-3">
             <h3 class="d-flex justify-content-center">Blog Details </h3>
          
-          <div class="card col-6 offset-3 show-card listing-card">
-            <img src="<%= blog.image %>" class="card-img-top show-img" alt="blog_img"   />
+          <div class=" card-img-top show-img ">
+            <img src="<%= blog.image %>" class="card-img-top show-img  f3 rounded-4" alt="blog_img"   />
          
              <div class="card-body" class="card-text">
                <p class="card-text"><b><%= blog.title %></b> <br></p>
