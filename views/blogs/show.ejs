@@ -16,7 +16,9 @@
               <p> <%= blog.description %></p>
               <p> <%= blog.created_at.toString().split(" ")[4] %> <br></p>
               <p> <%= blog.created_at.toString().split(" ").slice(0, 4).join("-") %><br></p>
+              <% if(blog.updated_at) { %>
               <p><strong> Updated_at:</strong> <span id="updatedAt"><%= new Date(blog.updated_at).toLocaleString() %></span></p>
+              <% } %>
               <p> Username by <i><%= blog.username %></i></p>
               
               
