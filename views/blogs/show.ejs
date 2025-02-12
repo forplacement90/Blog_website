@@ -19,18 +19,22 @@
               <% if(blog.updated_at) { %>
               <p><strong> Updated_at:</strong> <span id="updatedAt"><%= new Date(blog.updated_at).toLocaleString() %></span></p>
               <% } %>
-              <p> Username by <i><%= blog.username %></i></p>
+              <div class="chat-box1">
+                <img src="<%= blog.image %>" alt="Profile">
+                <div class="chat-content">
+                <div class="chat1-name"><b>Usename:-</b><%= blog.username %></div>
+              </div>
               
               
              
           </div>
           </div>
       
-       <div class="btns mb-3 mt-3 ">
-        <a href="/blogs/<%= blog._id %>/edit" class="btn btn-primary col-1 offset-3 edit-btn">Edit </a>
-          <form method="POST" action="/blogs/<%= blog._id %>?_method=DELETE">
+       <div class="btns mb-5 mt-5 fn4">
+          <a href="/blogs/<%= blog._id %>/edit" class="btn btn-primary">Edit </a>
+            <form method="POST" action="/blogs/<%= blog._id %>?_method=DELETE">
             <button class="btn btn-dark offset-5">Delete </button>
-          </form>
+            </form>
         </div>
         </div>
       </div>
