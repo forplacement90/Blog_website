@@ -107,6 +107,7 @@ img{
   padding: 10px 15px;
   border-radius: 10px;
   width: 257px;
+  height: 99px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   
 }
@@ -126,11 +127,11 @@ img{
 .chat-name {
   font-weight: bold;
   font-size: 14px;
-margin-bottom: 6px;
-color: #888;
+  margin-bottom: 6px;
+  color: #888;
 }
 
 .chat-time {
-  font-size: 12px;
-  color: #888;
+  font-size: 14px;
+  color: black;
 }
