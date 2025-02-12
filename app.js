@@ -68,7 +68,9 @@ app.post("/blogs", async (req, res) => {
     title: title,
     description: description,
     image: image,
-    created_at: new Date()
+    created_at: new Date(),
+    
+   
   });
     await newBlog.save();
     res.redirect("/blogs");
@@ -88,15 +90,19 @@ app.get("/blogs/:id/edit", async (req, res) => {
   res.render("blogs/edit.ejs", {blog});
 });
 
-// Update Route
+//Update Route
 app.put("/blogs/:id", async (req, res) => {
   let {id} = req.params;
   let { title, description, image } = req.body;
   const updated_at = new Date(Date.now());
-  let updatedBlog = await Blog.findByIdAndUpdate(id, { title, description, image, updated_at}, {runValidators: true, new: true});
+  let updatedBlog = await Blog.findByIdAndUpdate(id, { title, description, image, updated_at}, );
   console.log(updatedBlog);
   res.redirect(`/blogs/${id}`);
 }); 
+
+
+
+
 
 // Delete Route
 app.delete("/blogs/:id", async (req, res) => {
