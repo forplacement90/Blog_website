@@ -87,10 +87,9 @@
            <div class="chat-box">
              <img src="<%= blog.image %>" alt="Profile">
                 <div class="chat-content">
-
-                  <% if(blog.updated_at) { %>
-                <div class="chat-name"><%= blog.username %><span class="chat-time"><p><strong> Updated_at:</strong> <span id="updatedAt"><%= new Date(blog.updated_at).toLocaleString() %></span></p></span></div>
-               <% } %>
+                <div class="chat-name"><%= blog.username %></div>
+                 <div span class="chat-time"><p><strong> Updated_at:</strong> <span id="updatedAt"><%= new Date(blog.updated_at).toLocaleString() %></span></p></span></div>
+               
              </div>
              </div>
             </div>
