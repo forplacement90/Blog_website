@@ -6,14 +6,14 @@
 
     <div class="row mt-3">
         <div class="col-8 offset-3">
-            <h3 class="d-flex justify-content-center">Blog Details </h3>
+            <h3 class="d-flex justify-content-center mt-3">Blog Details </h3>
          
           <div class=" card-img-top show-img ">
-            <img src="<%= blog.image %>" class="card-img-top show-img  f3 rounded-4" alt="blog_img"   />
+            <img src="<%= blog.image %>" class="card-img-top show-img  f3 rounded-4 mt-3" alt="blog_img"   />
          
              <div class="card-body" class="card-text">
-               <p class="card-text"><b><%= blog.title %></b> <br></p>
-              <p> <%= blog.description %></p>
+               <p class="card-text mt-3"><b><%= blog.title %></b> <br></p>
+              <p style="font-weight: 400;"> <%= blog.description %></p>
               <p> <%= blog.created_at.toString().split(" ")[4] %> <br></p>
               <p> <%= blog.created_at.toString().split(" ").slice(0, 4).join("-") %><br></p>
               <% if(blog.updated_at) { %>
@@ -22,7 +22,7 @@
               <div class="chat-box1">
                 <img src="<%= blog.image %>" alt="Profile">
                 <div class="chat-content">
-                <div class="chat1-name"><b>Usename:-</b><%= blog.username %></div>
+                <div class="chat1-name"><%= blog.username %></div>
               </div>
               
               
