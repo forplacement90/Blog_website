@@ -83,11 +83,17 @@
               <!-- <p class="card-text"><%= blog.description %></p> -->
               <p class="card-text"><%= blog.created_at.toString().split(" ")[4] %></p>
               <p class="card-text"><%= blog.created_at.toString().split(" ").slice(0, 4).join("-") %></p>
-              <p class="card-text"> Username by <i><%= blog.username %></i></p> 
-              <p><strong>Last Updated:</strong> <span id="updatedAt"><%= new Date(blog.updated_at).toLocaleString() %></span></p>
+
+           <div class="chat-box">
+             <img src="<%= blog.image %>" alt="Profile">
+                <div class="chat-content">
+                <div class="chat-name"><%= blog.username %><span class="chat-time"><p><strong> Updated_at:</strong> <span id="updatedAt"><%= new Date(blog.updated_at).toLocaleString() %></span></p></span></div>
+               
+             </div>
+             </div>
             </div>
-        </div>
-      </a>
+          </div>
+         </a>
         <% } %>
     </div>
   </body>

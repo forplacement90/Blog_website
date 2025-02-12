@@ -32,7 +32,8 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-    res.send("Hi, I am root");
+    // res.send("Hi, I am root");
+    res.render("./blogs/usename.ejs")
 });
 
 // app.get("/testBlog", async (req, res) => {
@@ -68,7 +69,9 @@ app.post("/blogs", async (req, res) => {
     title: title,
     description: description,
     image: image,
-    created_at: new Date()
+    created_at: new Date(),
+    
+   
   });
     await newBlog.save();
     res.redirect("/blogs");
