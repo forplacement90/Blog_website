@@ -10,20 +10,20 @@
     <form method="POST" action="/blogs" novalidate class="needs-validation">
         <div class="mb-3 mt-3">
             <label for="username" class="form-label">Username</label>
-          <input name="blog[title]" placeholder="enter title" type="text" class="form-control" required/>
+          <input name="username" placeholder="enter username" type="text" class="form-control" required/>
            <div class="valid-feedback">Username looks good!</div>
           </div>
 
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-      <input name="blog[title]" placeholder="enter title" type="text" class="form-control" required/>
+      <input name="title" placeholder="enter title" type="text" class="form-control" required/>
        <div class="valid-feedback">Tittle looks good!</div>
       </div>
 
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <textarea
-        name="blog[description]"
+        name="description"
         class="form-control" ></textarea>
         <div class="invalid-feedback">Please Enter a description</div>
       </div>
@@ -31,7 +31,7 @@
       <div class="mb-3">
         <label for="image" class="form-label" class="form-label" >Image Links</label>
         <input
-        name="blog[image]"
+        name="image"
         placeholder="enter image URL/Link"
         type="text" class="form-control" />
      
